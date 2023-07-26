@@ -1,7 +1,20 @@
 pipeline {
-    agent any {
-        stages('Plan') {
-            
+    agent any
+
+    stages {
+        stages ('Plan') {
+            steps {
+                terraform init
+                terraform plan
+            }
+        }
+
+        stages ('Apply') {
+            steps {
+                input ('Approve?')
+                terraform init
+                terraform apply -auto-approve
+            }
         }
     }
 }
