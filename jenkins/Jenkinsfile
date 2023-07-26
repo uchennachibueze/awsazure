@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stages ('Plan') {
+        stage ('Plan') {
             steps {
                 terraform init
                 terraform plan
             }
         }
 
-        stages ('Apply') {
+        stage ('Apply') {
             steps {
                 input ('Approve?')
                 terraform init
