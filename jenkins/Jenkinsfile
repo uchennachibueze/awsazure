@@ -4,18 +4,20 @@ pipeline {
     stages {
         stage ('Plan') {
             steps {
-                bat 'terraform -version'
-                // terraform init
-                // terraform plan
+                bat '''
+                    terraform init
+                    terraform plan
+                '''
             }
         }
 
         stage ('Apply') {
             steps {
                 input ('Approve?')
-                bat 'terraform -version'
-                // terraform init
-                // terraform apply -auto-approve
+                bat '''
+                    terraform init
+                    terraform apply -auto-approve
+                '''
             }
         }
     }
