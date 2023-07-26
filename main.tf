@@ -1,6 +1,6 @@
 ######################## Start of AWS Resources ########################
 resource "aws_vpc" "this" {
-  cidr = "10.0.0.0/16"
+  cidr_block = "10.0.0.0/16"
 }
 
 ####################### End of AWS Resources ##########################
