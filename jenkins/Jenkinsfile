@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('Plan') {
             steps {
-                terraform -version
+                bat 'terraform -version'
                 // terraform init
                 // terraform plan
             }
@@ -13,7 +13,7 @@ pipeline {
         stage ('Apply') {
             steps {
                 input ('Approve?')
-                terraform -version
+                bat 'terraform -version'
                 // terraform init
                 // terraform apply -auto-approve
             }
