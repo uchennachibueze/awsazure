@@ -20,6 +20,7 @@ pipeline {
             steps {
                 input ('Approve?')
                 bat '''
+                    input ('Do you want to Apply?')
                     terraform init
                     terraform apply -auto-approve
                 '''
