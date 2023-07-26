@@ -5,7 +5,15 @@ resource "aws_vpc" "this" {
 
 ####################### End of AWS Resources ##########################
 
-resource "azurerm_virtual_network" "this" {
-    name = "testvnet"
-    address_space = ["10.0.0.0/16"]
-}
+###################### Start of Azure Resources #############################
+
+# resource "azurerm_resource_group" "rg" {
+#   name = ""
+# } 
+
+# resource "azurerm_virtual_network" "this" {
+#     name = "testvnet"
+#     address_space = ["10.0.0.0/16"]
+# }
+
+###################### End of Azure Resources ###########################
