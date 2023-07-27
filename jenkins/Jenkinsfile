@@ -13,7 +13,12 @@ pipeline {
     stages {
         stage ('AZ Login') {
             steps {
-                bat ('az login --service-principal -u $CLIENT_ID -p $CLIENT_SECRET --tenant $TENANT_ID')
+                bat '''
+                    echo $CLIENT_ID
+                    echo $CLIENT_SECRET
+                    echo $TENANT_ID
+                    // bat ('az login --service-principal -u $CLIENT_ID -p $CLIENT_SECRET --tenant $TENANT_ID')
+                '''
             }
         }
         stage ('Plan') {
