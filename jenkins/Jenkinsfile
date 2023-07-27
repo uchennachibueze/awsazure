@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage ('AZ Login') {
             steps {
-                bat 'az login --service-principal -u $CLIENT_ID -p $CLIENT_SECRET --tenant $TENANT_ID'
+                bat 'az login --service-principal -u $CLIENT_ID -p $CLIENT_SECRET --tenant 5ae726d0-4229-44c5-8ddd-c2139d27f51e'
             }
         }
         stage ('Plan') {
