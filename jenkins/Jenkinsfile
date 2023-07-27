@@ -7,7 +7,8 @@ pipeline {
         CLIENT_ID = credentials('CLIENT_ID')
         CLIENT_SECRET = credentials('CLIENT_SECRET')
         SUBSCRIPTION_ID = credentials('SUBSCRIPTION_ID')
-        TENANT_ID = credentials('TENANT_ID')
+        // TENANT_ID = credentials('TENANT_ID')
+        TENANT_ID = '5ae726d0-4229-44c5-8ddd-c2139d27f51e'
     }
 
     stages {
